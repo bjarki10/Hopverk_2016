@@ -24,7 +24,7 @@ namespace hopverk
 
         string[] arr = new string[4];
 
-
+        string karfa;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Form1()
         {
@@ -42,6 +42,11 @@ namespace hopverk
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            li_korfa.Columns.Add("Nafn", 200);
+            li_korfa.Columns.Add("Voruflokkur", 120);
+            li_korfa.Columns.Add("Verd", 60);
+            li_korfa.Columns.Add("ALager", 60);
+
             li_lager.Clear();
             li_lager.Columns.Add("Nafn", 200);
             li_lager.Columns.Add("Voruflokkur", 120);
@@ -118,6 +123,41 @@ namespace hopverk
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+
+            ListViewItem itm;
+
+            string[] linaUrLista = karfa.Split(':');
+            string Nafn = linaUrLista[0];
+            string Voruflokkur = linaUrLista[1];
+            string Verd = linaUrLista[2];
+            string ALager = linaUrLista[3];
+            
+                arr[0] = Nafn;
+                arr[1] = Voruflokkur;
+                arr[2] = Verd;
+                arr[3] = ALager;
+
+
+                itm = new ListViewItem(arr);
+                li_korfa.Items.Add(itm);
+            
+        }
+        private void li_lager_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (li_lager.SelectedIndices.Count <= 0)
+            {
+                return;
+            }
+            int intSelectIndex = li_lager.SelectedIndices[0];
+            if (intSelectIndex >= 0)
+            {
+                karfa = li_lager.SelectedItems[0].SubItems[0].Text + ":" + li_lager.SelectedItems[0].SubItems[1].Text + ":" + li_lager.SelectedItems[0].SubItems[2].Text + ":" + li_lager.SelectedItems[0].SubItems[3].Text;
             }
         }
     }
