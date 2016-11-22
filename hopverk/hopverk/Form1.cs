@@ -160,6 +160,11 @@ namespace hopverk
                 karfa = li_lager.SelectedItems[0].SubItems[0].Text + ":" + li_lager.SelectedItems[0].SubItems[1].Text + ":" + li_lager.SelectedItems[0].SubItems[2].Text + ":" + li_lager.SelectedItems[0].SubItems[3].Text;
             }
         }
+
+        private void li_korfa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

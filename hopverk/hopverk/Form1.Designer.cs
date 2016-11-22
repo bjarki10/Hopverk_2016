@@ -82,6 +82,7 @@
             this.li_korfa.TabIndex = 14;
             this.li_korfa.UseCompatibleStateImageBehavior = false;
             this.li_korfa.View = System.Windows.Forms.View.Details;
+            this.li_korfa.SelectedIndexChanged += new System.EventHandler(this.li_korfa_SelectedIndexChanged);
             // 
             // li_lager
             // 
@@ -94,6 +95,7 @@
             this.li_lager.UseCompatibleStateImageBehavior = false;
             this.li_lager.View = System.Windows.Forms.View.Details;
             this.li_lager.SelectedIndexChanged += new System.EventHandler(this.li_lager_SelectedIndexChanged);
+            this.li_lager.DoubleClick += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
