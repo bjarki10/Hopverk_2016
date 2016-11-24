@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>C:\Users\2511972459\Downloads\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\Æfingaverkefni_5\Æfingaverkefni_5\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
