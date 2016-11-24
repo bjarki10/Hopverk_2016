@@ -23,7 +23,7 @@ namespace hopverk
         List<string> linur = new List<string>();
 
         string[] arr = new string[4];
-
+        
         string karfa;
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
         public Form1()
@@ -126,7 +126,7 @@ namespace hopverk
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bt_korfu_Click(object sender, EventArgs e)
         {
             
 
@@ -163,7 +163,19 @@ namespace hopverk
 
         private void li_korfa_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
+            
+        }
 
+        private void bt_eda_Click(object sender, EventArgs e)
+        {
+            for (int i = li_korfa.Items.Count - 1; i >= 0; i--)
+            {
+                if (li_korfa.Items[i].Selected)
+                {
+                    li_korfa.Items[i].Remove();
+                }
+            }
         }
     }
 }
