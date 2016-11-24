@@ -31,7 +31,7 @@
             this.bt_korfu = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bt_Check_out = new System.Windows.Forms.Button();
             this.li_korfa = new System.Windows.Forms.ListView();
             this.li_lager = new System.Windows.Forms.ListView();
             this.bt_eda = new System.Windows.Forms.Button();
@@ -64,14 +64,15 @@
             this.button3.Text = "Admin";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // bt_Check_out
             // 
-            this.button4.Location = new System.Drawing.Point(756, 227);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Check out";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bt_Check_out.Location = new System.Drawing.Point(756, 227);
+            this.bt_Check_out.Name = "bt_Check_out";
+            this.bt_Check_out.Size = new System.Drawing.Size(75, 23);
+            this.bt_Check_out.TabIndex = 6;
+            this.bt_Check_out.Text = "Check out";
+            this.bt_Check_out.UseVisualStyleBackColor = true;
+            this.bt_Check_out.Click += new System.EventHandler(this.bt_Check_out_Click);
             // 
             // li_korfa
             // 
@@ -116,7 +117,7 @@
             this.Controls.Add(this.bt_eda);
             this.Controls.Add(this.li_lager);
             this.Controls.Add(this.li_korfa);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.bt_Check_out);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bt_korfu);
@@ -133,7 +134,7 @@
         private System.Windows.Forms.Button bt_korfu;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bt_Check_out;
         private System.Windows.Forms.ListView li_korfa;
         private System.Windows.Forms.ListView li_lager;
         private System.Windows.Forms.Button bt_eda;

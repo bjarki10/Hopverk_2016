@@ -13,11 +13,10 @@ namespace hopverk
 {
     public partial class Form1 : Form
     {
-
-
         List<int> listi2 = new List<int>();
 
         Random rnd = new Random();
+
         List<int> listi = new List<int>();
 
         List<string> linur = new List<string>();
@@ -25,7 +24,10 @@ namespace hopverk
         string[] arr = new string[4];
         
         string karfa;
+
         Gagnagrunnur gagnagrunnur = new Gagnagrunnur();
+
+        Magn magn = new Magn();
         public Form1()
         {
             InitializeComponent();
@@ -131,12 +133,14 @@ namespace hopverk
             
 
             ListViewItem itm;
-
+            string test = null;
             string[] linaUrLista = karfa.Split(':');
             string Nafn = linaUrLista[0];
             string Voruflokkur = linaUrLista[1];
             string Verd = linaUrLista[2];
             string ALager = linaUrLista[3];
+            test = magn.reciver(Nafn,ALager);
+            magn.Show();
             
                 arr[0] = Nafn;
                 arr[1] = Voruflokkur;
@@ -176,6 +180,11 @@ namespace hopverk
                     li_korfa.Items[i].Remove();
                 }
             }
+        }
+
+        private void bt_Check_out_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
